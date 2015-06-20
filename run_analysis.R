@@ -1,24 +1,26 @@
-###source("run_analysis2.R")
-install.packages("dplyr")
 library(dplyr)
 
+## DEAR READER, pls read the README.md first. Cheers. 
+
+
+## This function is there to factorize the call of opening the activity_id files(y_test.txt, y_train.txt). The call is done twice.
 gt_labelActivity<-function(a_file)
 {
   ## load activity labels ids
-  label<-read.table(a_file, sep="")
+  id<-read.table(a_file, sep="")
   ## give a col name
-  names(label)<-c("label_id")
-  label
+  names(id)<-c("label_id")
+  id
 }
 
+## STEP1
 ## this function is getting the input files from working dir and does the merge to get one table 
 ## by merging subjetcs, label activity id, and X_train X_test datasets together
 ## no input arguments as we are supposing the names of sources to be stable
 Step1_Merge<-function() 
 {
   
-  
-  
+  ## LOADING DATASETS
   
   ## load features
   features<-read.table(".\\UCI HAR Dataset\\features.txt", sep="")
@@ -138,20 +140,19 @@ Step4_DescriptiveVariableNames<-function(a_dfXLabeledMergedData)
 ## STEP 5 
 ## From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 ## COMMENTS to the reader:
-## This is has been partially done in STEP1 : Descriptive variable is partly done in step 1 be able to use dply::select function in step 2
-## However using dply::select implies to have valid columns names which turned them in poorly descriptive as original
-## let us clean that here
-Step5_DescriptiveVariableNames<-function(a_dfXLabeledMergedData)
+## I do a group_by with a summarize_each column function using  mean function
+## Then i update the name of the columns with prefix AVGGrouped_ for Average grouped by
+Step5_IndependentTidyData<-function(a_dfXDescriptiveMergedData)
 {
-## considering that the features have been joined in step1 to name variables properly,
-## considering that those variables names have been modified in step2 in order to use dplyr::select (characters such as '-'  '('  ')'  ',' have been replaced by character "."
-## so we have some variables names containing string like "..." or ".." that we can remove.
-## I consider that I have to clear the multiple '...' or '..' from variables names and replace them by '.' as it respects the R naming columns convention
-## EXAMPLE:
-## "tBodyGyro-mean()-X   has been changed in step 2 by    "tBodyGyro.mean...X"
-## and will be replaced by "tBodyGyro.mean.X" which is good to read.
-
-  finalDF<-a_dfXLabeledMergedData %>% group_by(subject,activity) %>% summarise_each(funs(mean))
+  finalDF<-a_dfXDescriptiveMergedData %>% group_by(subject,activity) %>% summarise_each(funs(mean))
+  
+  ## then we update the variables names that indicate that this is an average calculation based on a grouping
+  description<-names(finalDF)
+  description<-paste("AVGGrouped_", description, sep="")
+  ##then put back original name of subject and activity columns
+  description[1]<-c("subject")
+  description[2]<-c("activity")
+  names(finalDF)<-description
   finalDF
 }
 
@@ -159,13 +160,6 @@ Step5_DescriptiveVariableNames<-function(a_dfXLabeledMergedData)
 
 run_analysis<-function()
 {
-  run<-Step1_Merge() %>%  Step2_Extract() %>% Step3_NameActivity () %>% Step4_DescriptiveVariableNames() %>%  Step5_DescriptiveVariableNames()
-  description<-names(run)
-  
-  ## then we update the variables names that indicate that this is an average calculation based on a grouping
-  description<-paste("AVG_Grouping_", description, sep="")
-  description[1]<-c("subject")
-  description[2]<-c("activity")
-  names(run)<-description
+  run<-Step1_Merge() %>%  Step2_Extract() %>% Step3_NameActivity () %>% Step4_DescriptiveVariableNames() %>%  Step5_IndependentTidyData()
   run
 }
