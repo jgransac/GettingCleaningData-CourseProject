@@ -9,10 +9,10 @@ Here we are explaining what the the script Run_analysis.R does in technical deta
 
 **Details on output**
 Finally, the tidy dataset contains observations according to rules explicited by Hadley Whickham's paper (http://vita.had.co.nz/papers/tidy-data.pdf), all columns contains header with explicit names that are defined in the CodeBook.md, there is no duplicate columns.
-At the end, we have a tidy data set of 180 rows , 69 columns.
+At the end, we have a tidy data set of 180 rows , 68 columns.
 
 **Note**
-We kept some standard deviation and mean measurements in the tidy dataset , exclusing those with names like MeanFreq and gravityMean because those ones are not measurements that comes from calculation on the mean or std. Indeed, these measurements are based on a mean frequence and mean gravity.
+We kept some standard deviation and mean measurements in the tidy dataset , exclusing those with names like MeanFreq and gravityMean because those ones are not measurements that comes from calculation on the mean or std. Indeed, these measurements are based on a mean frequence and mean gravity. We removed also measurements with "angle" that are measureing angle between vectors and are not part of a tidy data for measurements.
 		
 **SCRIPT**		
 For this course project, we have done a Run_analysis.R file that contains:
@@ -26,8 +26,8 @@ For this project, I have considered two data sets to load:
 \\UCI HAR Dataset\\train\\X_train.txt
 \\UCI HAR Dataset\\test\\X_test.txt
 
-I have ignored the datasets under Inertial folders as it was asked in David's personal course project FAQ
-(https://class.coursera.org/getdata-015/forum/thread?thread_id=26) that helped me to understand the meaning of the project.
+I have ignored the datasets under Inertial folders as it was indicated in David's personal course project FAQ
+(https://class.coursera.org/getdata-015/forum/thread?thread_id=26).
 
 **Please pay attention that we require here package dplyr.
 Please do first install.packages("dplyr")**
