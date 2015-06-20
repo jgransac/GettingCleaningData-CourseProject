@@ -86,7 +86,7 @@ Step2_Extract<-function(a_dfXMergedData)
   ## Example: "tBodyAccJerk-arCoeff()-Y,3" turns to "tBodyAccJerk.arCoeff...Y.3"
   valid_column_names <- make.names(names=names(a_dfXMergedData), unique=TRUE, allow_ = TRUE)
   names(a_dfXMergedData)<-valid_column_names
-  XExtractedDataWith_mean_std_Measures<-select(a_dfXMergedData, c(subject,label_id),contains("mean"), contains("std"), -contains("meanFreq"), -contains("gravityMean"))
+  XExtractedDataWith_mean_std_Measures<-select(a_dfXMergedData, c(subject,label_id),contains("mean"), contains("std"), -contains("meanFreq"), -contains("gravityMean"), -contains("angle"))
 ##  XExtractedDataWith_mean_std_Measures<-select(a_dfXMergedData, c(subject,label_id),contains("mean"), contains("std"), -contains("meanFreq"))
   XExtractedDataWith_mean_std_Measures
 }
