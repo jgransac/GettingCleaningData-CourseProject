@@ -1,70 +1,17 @@
-Variable name	|	Explanation	|	Domain	|	type	|	unit	|	Range
-subject	|	Identifier of the subject	|		|	integer	|		|	
-activity	|	6 activities for each  subject when grabbing the measurement	|		|	string	|		|	"WALKING, WALKING_UPSTAIRS,,WALKING_DOWNSTAIRS,SITTING,STANDING,LAYING
-"
-AVGGrouped_tBodyAcc.meanX	|	Mean of body acceleration on X axis	|	time	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyAcc.meanY	|	Mean of body acceleration on Y axis	|	time	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyAcc.meanZ	|	Mean of body acceleration on Z axis	|	time	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tGravityAcc.meanX	|	Mean of gravity acceleration on X axis	|	time	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tGravityAcc.meanY	|	Mean of gravity acceleration on Y axis	|	time	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tGravityAcc.meanZ	|	Mean of gravity acceleration on Z axis	|	time	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyAccJerk.meanX	|	Mean of body acceleration Jerk on X axis	|	time	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyAccJerk.meanY	|	Mean of body acceleration Jerk on Y axis	|	time	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyAccJerk.meanZ	|	Mean of body acceleration Jerk on Z axis	|	time	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyGyro.meanX	|	Mean of body angular velocity on X axis	|	time	|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyGyro.meanY	|	Mean of body angular velocity on Y axis	|	time	|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyGyro.meanZ	|	Mean of body angular velocity on Z axis	|	time	|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyGyroJerk.meanX	|	Mean of body angular velocity Jerk  on X axis	|	time	|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyGyroJerk.meanY	|	Mean of body angular velocity Jerk  on Y axis	|	time	|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyGyroJerk.meanZ	|	Mean of body angular velocity Jerk  on Z axis	|	time	|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyAccMag.mean.	|	Mean of body acceleration magnitude	|	time	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tGravityAccMag.mean.	|	Mean of gravity acceleration magnitude	|	time	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyAccJerkMag.mean.	|	Mean of body acceleration Jerk magnitude	|	time	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyGyroMag.mean.	|	Mean of body angular velocity Magnitude	|	time	|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyGyroJerkMag.mean.	|	Mean of body angular velocity Jerk Magnitude	|	time	|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_fBodyAcc.meanX	|	Mean of body acceleration on X axis	|	frequency	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyAcc.meanY	|	Mean of body acceleration on Y axis	|	frequency	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyAcc.meanZ	|	Mean of body acceleration on Z axis	|	frequency	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyAccJerk.meanX	|	Mean of body acceleration Jerk on X axis	|	frequency	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyAccJerk.meanY	|	Mean of body acceleration Jerk on Y axis	|	frequency	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyAccJerk.meanZ	|	Mean of body acceleration Jerk on Z axis	|	frequency	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyGyro.meanX	|	Mean of body angular velocity on X axis	|	frequency	|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_fBodyGyro.meanY	|	Mean of body angular velocity on Y axis	|	frequency	|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_fBodyGyro.meanZ	|	Mean of body angular velocity on Z axis	|	frequency	|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_fBodyAccMag.mean.	|	Mean of body acceleration magnitude	|	frequency	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyBodyAccJerkMag.mean.	|	Mean of body acceleration Jerk magnitude	|	frequency	|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyBodyGyroMag.mean.	|	Mean of body angular velocity magnitude	|	frequency	|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_fBodyBodyGyroJerkMag.mean.	|	Mean of body angular velocity jerk magnitude	|	frequency	|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyAcc.stdX	|	Standard deviation of body acceleration on X axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyAcc.stdY	|	Standard deviation of body acceleration on Y axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyAcc.stdZ	|	Standard deviation of body acceleration on Z axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tGravityAcc.stdX	|	Standard deviation of gravity acceleration on X axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tGravityAcc.stdY	|	Standard deviation of gravity acceleration on Y axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tGravityAcc.stdZ	|	Standard deviation of gravity acceleration on Z axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyAccJerk.stdX	|	Standard deviation of body acceleration Jerk on X axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyAccJerk.stdY	|	Standard deviation of body acceleration Jerk on Y axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyAccJerk.stdZ	|	Standard deviation of body acceleration Jerk on Z axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyGyro.stdX	|	Standard deviation of body angular velocity on X axis	|		|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyGyro.stdY	|	Standard deviation of body angular velocity on Y axis	|		|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyGyro.stdZ	|	Standard deviation of body angular velocity on Z axis	|		|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyGyroJerk.stdX	|	Standard deviation of body angular velocity Jerk  on X axis	|		|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyGyroJerk.stdY	|	Standard deviation of body angular velocity Jerk  on Y axis	|		|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyGyroJerk.stdZ	|	Standard deviation of body angular velocity Jerk  on Z axis	|		|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyAccMag.std.	|	Standard deviation of body acceleration magnitude	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tGravityAccMag.std.	|	Standard deviation of gravity acceleration magnitude	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyAccJerkMag.std.	|	Standard deviation of body acceleration Jerk magnitude	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_tBodyGyroMag.std.	|	Standard deviation of body angular velocity Magnitude	|		|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_tBodyGyroJerkMag.std.	|	Standard deviation of body angular velocity Jerk Magnitude	|		|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_fBodyAcc.stdX	|	Standard deviation of body acceleration on X axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyAcc.stdY	|	Standard deviation of body acceleration on Y axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyAcc.stdZ	|	Standard deviation of body acceleration on Z axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyAccJerk.stdX	|	Standard deviation of body acceleration Jerk on X axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyAccJerk.stdY	|	Standard deviation of body acceleration Jerk on Y axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyAccJerk.stdZ	|	Standard deviation of body acceleration Jerk on Z axis	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyGyro.stdX	|	Standard deviation of body angular velocity on X axis	|		|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_fBodyGyro.stdY	|	Standard deviation of body angular velocity on Y axis	|		|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_fBodyGyro.stdZ	|	Standard deviation of body angular velocity on Z axis	|		|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_fBodyAccMag.std.	|	Standard deviation of body acceleration magnitude	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyBodyAccJerkMag.std.	|	Standard deviation of body acceleration Jerk magnitude	|		|	double	|	m/s2	|	btw -1 and 1
-AVGGrouped_fBodyBodyGyroMag.std.	|	Standard deviation of body angular velocity magnitude	|		|	double	|	radians/second	|	btw -1 and 1
-AVGGrouped_fBodyBodyGyroJerkMag.std.	|	Standard deviation of body angular velocity jerk magnitude	|		|	double	|	radians/second	|	btw -1 and 1
+
+**Please ReadMe.md first.**
+
+
+**INTRO**
+
+Dataset contains the average of the following measurement group by subject and 6 activities.
+As there are 30 subjects and 6 activities, we get 180 (30*6) observations.
+Each observations has been prefixed with AVGGrouped_ to mean they are the average of measurements group by subject and activity.
+
+**Source of raw data**
+
+Data have been collected with a samsung smartphone attached to the subject's waist while they were doing activties descibed below. Using its embedded accelerometer and gyroscope, data  captured are 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. 
+
+** Variables description - Please read codebook.csv**
+
+You will find the following info for each variable of the tidy dataset:
