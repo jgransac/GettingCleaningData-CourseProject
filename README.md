@@ -1,6 +1,20 @@
 # GettingCleaningData-CourseProject
 Work done for GettingCleaningData CourseProject - June2015
 
+**Introduction**
+Here we are explaining what the the script Run_analysis.R does in technical details regarding the UCI HAR original raw Dataset. In terms of practice, this generates a tidy data text file that meets the principles that follows:
+* each variable measured  is in one column,
+* each different observation of each variable is in a different row,
+* the tidy dataset contains some measures relative on one specific tests which is based on Samsung smartphones where 30 different subjects wear a smartphone that captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. 
+
+**Details on output**
+Finally, the tidy dataset contains observations according to rules explicited by Hadley Whickham's paper (http://vita.had.co.nz/papers/tidy-data.pdf), all columns contains header with explicit names that are defined in the CodeBook.md, there is no duplicate columns.
+At the end, we have a tidy data set of 180 rows , 69 columns.
+
+**Note**
+We kept some standard deviation and mean measurements in the tidy dataset , exclusing those with names like MeanFreq and gravityMean because those ones are not measurements that comes from calculation on the mean or std. Indeed, these measurements are based on a mean frequence and mean gravity.
+		
+**SCRIPT**		
 For this course project, we have done a Run_analysis.R file that contains:
 - 5 steps functions named Step1_Merge(), Step2_Extract(df_from_step1_function), Step3_NameActivity(df_from_step2_function), Step4_DescriptiveVariableNames(df_from_step3_function), Step5_IndependentTidyData(df_from_step4_function).
 
@@ -38,7 +52,7 @@ Note that I did name the measures columns in this step 1 with the FEATURES DATA 
 		So we had a look to all measurements with words like std and mean. 
 		It appears that some of them are MeanFreq and gravityMean and those ones are not measurements 
 		on the mean or std but measurements based on a mean frequence and mean gravity, 
-		which is different and expplains why i decided to exclude them form datasets. 
+		which is different and explains why i decided to exclude them from datasets. 
 		Then, I have extract all other mesurement with Mean and std via dplyr:select function 
 		that is really easy to use with sub-function contains. 
 		For this, I had to make current names as valid names for select using function make.names. 
