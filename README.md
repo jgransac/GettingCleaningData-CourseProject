@@ -44,10 +44,12 @@ Note that I did name the measures columns in this step 1 with the FEATURES DATA 
 		This function change some characters such as (,)- in .
 
 		- Step 3: we have merged the activity_labels file with my step2 dataset through the ids using merge function.
+		
 		- Step 4 : as the column were already named in step 1 but modified by make.names, 
 		we needed to clear a bit those names. For that, I have replaced the .. or ... in the names by .
 		At the end, the column names are clear and in accordance with rules of tidy data. 
 		More information to be read in the code book.
+
 		- Step 5 :We use here a group_by with a summarize_each column function using  mean function.
 			Then we update the name of the columns with prefix AVGGrouped_ for Average grouped by.
 
