@@ -33,12 +33,20 @@ then bind subject_train.txt, y_train.txt and X_train.txt by rows into a datafram
 then bind subject_test.txt, y_test.txt and X_test.txt by rows into a dataframe 2. Then i merged the two dataframe using rbind.
 Note that I did name the measures columns in this step 1 with the FEATURES DATA SET. I did that here because it is very convenient to have the labels here to use them in step 2.
 
-		- in step2 function, the goal is to extract "only the measurements on the mean and standard deviation for each measurement". So we had a look to all measurements with words like std and mean. I appears that some of them are MeanFreq and gravityMean and those ones are not measurements on the mean or std but measurements based on a mean frequence and mean gravity, which is different and expplains why i decided to exclude them form datasets. 
-		Then, I have extract all other mesurement with Mean and std via dplyr:select function that is really easy to use with sub-function contains. For this, I had to make current names as valid names for select using function make.names. this function change some characters such as (,)- in .
+		- in step2 function, the goal is to extract "only the measurements on the mean and standard deviation for each measurement". 
+		So we had a look to all measurements with words like std and mean. 
+		It appears that some of them are MeanFreq and gravityMean and those ones are not measurements 
+		on the mean or std but measurements based on a mean frequence and mean gravity, 
+		which is different and expplains why i decided to exclude them form datasets. 
+		Then, I have extract all other mesurement with Mean and std via dplyr:select function 
+		that is really easy to use with sub-function contains. 
+		For this, I had to make current names as valid names for select using function make.names. 
+		This function change some characters such as (,)- in .
 
-		- Step 3: we have merged the activity_labels file with my step2 dataset throu the id using merge function.
+		- Step 3: we have merged the activity_labels file with my step2 dataset through the ids using merge function.
 		- Step 4 : as the column were already named in step 1 but modified by make.names, I needed to clear a bit those names. For that, I have replaced the .. or ... in the names by .
-		At the end, the column names are clear and in accordance with rules of tidy data. More information to be read in the code book.
+		At the end, the column names are clear and in accordance with rules of tidy data. 
+		More information to be read in the code book.
 		- Step 5 :We use here a group_by with a summarize_each column function using  mean function.
 			Then we update the name of the columns with prefix AVGGrouped_ for Average grouped by.
 
